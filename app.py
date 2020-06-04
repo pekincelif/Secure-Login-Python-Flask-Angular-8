@@ -16,9 +16,9 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'almithaara'
 api = Api(app)
 
-@app.before_first_request
-def create_tables():
-    db.create_all()
+# @app.before_first_request
+# def create_tables():
+#     db.create_all()
 
 app.config['JWT_AUTH_URL_RULE'] = '/login'
 # config JWT to expire within half an hour
